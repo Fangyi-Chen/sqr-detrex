@@ -1,5 +1,8 @@
-<h2 align="left">detrex</h2>
-<p align="left">
+<div align="center">
+  <img src="./assets/logo_2.png" width="30%">
+</div>
+<h2 align="center">🦖detrex: Benchmarking Detection Transformers</h2>
+<p align="center">
     <a href="https://github.com/IDEA-Research/detrex/releases">
         <img alt="release" src="https://img.shields.io/github/v/release/IDEA-Research/detrex">
     </a>
@@ -20,12 +23,27 @@
     </a>
 </p>
 
+
+<div align="center">
+
+<!-- <a href="https://arxiv.org/abs/2306.07265">📚Read detrex Benchmarking Paper</a> <sup><i><font size="3" color="#FF0000">New</font></i></sup> |
+<a href="https://rentainhe.github.io/projects/detrex/">🏠Project Page</a> <sup><i><font size="3" color="#FF0000">New</font></i></sup> |  [🏷️Cite detrex](#citation) -->
+
+[📚Read detrex Benchmarking Paper](https://arxiv.org/abs/2306.07265) | [🏠Project Page](https://rentainhe.github.io/projects/detrex/) | [🏷️Cite detrex](#citation)
+
+</div>
+
+
+<div align="center">
+
 [📘Documentation](https://detrex.readthedocs.io/en/latest/index.html) |
 [🛠️Installation](https://detrex.readthedocs.io/en/latest/tutorials/Installation.html) |
 [👀Model Zoo](https://detrex.readthedocs.io/en/latest/tutorials/Model_Zoo.html) |
 [🚀Awesome DETR](https://github.com/IDEA-Research/awesome-detection-transformer) |
 [🆕News](#whats-new) |
 [🤔Reporting Issues](https://github.com/IDEA-Research/detrex/issues/new/choose)
+
+</div>
 
 
 ## Introduction
@@ -60,12 +78,14 @@ The repo name detrex has several interpretations:
 - <font color=#008000> <b> de-t.rex </b> </font>: de means 'the' in Dutch. T.rex, also called Tyrannosaurus Rex, means 'king of the tyrant lizards' and connects to our research work 'DINO', which is short for Dinosaur.
 
 ## What's New
-v0.2.0 was released on 13/11/2022:
-- Release new baselines for `DINO-R50-12ep`, `DINO-Swin-Large-36ep`, `DAB-Deformable-DETR-R50-50ep`, `DAB-Deformable-DETR-R50-Two-Stage`, please check [Model Zoo](https://detrex.readthedocs.io/en/latest/tutorials/Model_Zoo.html).
-- Rebuild more clear config files for projects.
-- Support [H-Deformable-DETR](./projects/h_deformable_detr/)
-- Release H-Deformable-DETR pretrained weights including `H-Deformable-DETR-R50`, `H-Deformable-DETR-Swin-Tiny`, `H-Deformable-DETR-Swin-Large` in [H-Deformable-DETR](./projects/h_deformable_detr/)
-- Add demo for visualizing customized input images or videos using pretrained weights in [demo](./demo/)
+v0.4.0 was released on 02/06/2023:
+- Support [CO-MOT](./projects/co_mot/) aims for End-to-End Multi-Object Tracking by [Feng Yan](https://scholar.google.com/citations?user=gO4divAAAAAJ&hl=zh-CN&oi=sra).
+- Release `DINO` with optimized hyper-parameters which achieves `50.0 AP` under 1x settings.
+- Release pretrained DINO based on `InternImage`, `ConvNeXt-1K pretrained` backbones.
+- Release `Deformable-DETR-R50` pretrained weights.
+- Release `DETA` and better `H-DETR` pretrained weights: achieving `50.2 AP` and `49.1 AP` respectively.
+
+
 
 Please see [changelog.md](./changlog.md) for details and release history.
 
@@ -82,6 +102,11 @@ Please refer to [Getting Started with detrex](https://detrex.readthedocs.io/en/l
 - [Analyze the model under detrex](https://detrex.readthedocs.io/en/latest/tutorials/Tools.html#model-analysis)
 - [Download and initialize with the pretrained backbone weights](https://detrex.readthedocs.io/en/latest/tutorials/Using_Pretrained_Backbone.html)
 - [Frequently asked questions](https://github.com/IDEA-Research/detrex/issues/109)
+- [A simple onnx convert tutorial provided by powermano](https://github.com/IDEA-Research/detrex/issues/192)
+- Simple training techniques: [Model-EMA](https://github.com/IDEA-Research/detrex/pull/201), [Mixed Precision Training](https://github.com/IDEA-Research/detrex/pull/198), [Activation Checkpoint](https://github.com/IDEA-Research/detrex/pull/200)
+- [Simple tutorial about custom dataset training](https://github.com/IDEA-Research/detrex/pull/187)
+
+Although some of the tutorials are currently presented with relatively simple content, we will constantly improve our documentation to help users achieve a better user experience.
 
 ## Documentation
 
@@ -95,15 +120,21 @@ Results and models are available in [model zoo](https://detrex.readthedocs.io/en
 
 - [x] [DETR (ECCV'2020)](./projects/detr/)
 - [x] [Deformable-DETR (ICLR'2021 Oral)](./projects/deformable_detr/)
+- [x] [PnP-DETR (ICCV'2021)](./projects/pnp_detr/)
 - [x] [Conditional-DETR (ICCV'2021)](./projects/conditional_detr/)
+- [x] [Anchor-DETR (AAAI 2022)](./projects/anchor_detr/)
 - [x] [DAB-DETR (ICLR'2022)](./projects/dab_detr/)
 - [x] [DAB-Deformable-DETR (ICLR'2022)](./projects/dab_deformable_detr/)
 - [x] [DN-DETR (CVPR'2022 Oral)](./projects/dn_detr/)
 - [x] [DN-Deformable-DETR (CVPR'2022 Oral)](./projects/dn_deformable_detr/)
-- [x] [DINO (ArXiv'2022)](./projects/dino/)
-- [x] [Group-DETR (ArXiv' 2022)](./projects/group_detr/)
-- [x] [H-Deformable-DETR (ArXiv' 2022)](./projects/h_deformable_detr/)
-- [x] [SQR-DAB-DETR (CVPR'2022)](./projects/sqr_detr/)
+- [x] [Group-DETR (ArXiv'2022)](./projects/group_detr/)
+- [x] [DETA (ArXiv'2022)](./projects/deta/)
+- [x] [DINO (ICLR'2023)](./projects/dino/)
+- [x] [H-Deformable-DETR (CVPR'2023)](./projects/h_deformable_detr/)
+- [x] [MaskDINO (CVPR'2023)](./projects/maskdino/)
+- [x] [CO-MOT (ArXiv'2023)](./projects/co_mot/)
+- [x] [SQR-DETR (CVPR'2023)](./projects/sqr_detr/)
+
 Please see [projects](./projects/) for the details about projects that are built based on detrex.
 
 </details>
@@ -120,22 +151,24 @@ This project is released under the [Apache 2.0 license](LICENSE).
 
 
 ## Citation
-If you find the projects held by detrex useful in your research, please consider cite:
+If you use this toolbox in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
 
-<details>
-<summary> <b> Citation List </b> </summary>
+- Citing **detrex**:
 
-- Cite **detrex**
 ```BibTeX
-@misc{ideacvr2022detrex,
-  author =       {detrex contributors},
-  title =        {detrex: An Research Platform for Transformer-based Object Detection Algorithms},
-  howpublished = {\url{https://github.com/IDEA-Research/detrex}},
-  year =         {2022}
+@misc{ren2023detrex,
+      title={detrex: Benchmarking Detection Transformers}, 
+      author={Tianhe Ren and Shilong Liu and Feng Li and Hao Zhang and Ailing Zeng and Jie Yang and Xingyu Liao and Ding Jia and Hongyang Li and He Cao and Jianan Wang and Zhaoyang Zeng and Xianbiao Qi and Yuhui Yuan and Jianwei Yang and Lei Zhang},
+      year={2023},
+      eprint={2306.07265},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
-- Cite **DETR**
+<details>
+<summary> Citation Supported Algorithms </summary>
+
 ```BibTex
 @inproceedings{carion2020end,
   title={End-to-end object detection with transformers},
@@ -145,30 +178,21 @@ If you find the projects held by detrex useful in your research, please consider
   year={2020},
   organization={Springer}
 }
-```
 
-- Cite **Deformable-DETR**
-```BibTex
 @article{zhu2020deformable,
   title={Deformable DETR: Deformable Transformers for End-to-End Object Detection},
   author={Zhu, Xizhou and Su, Weijie and Lu, Lewei and Li, Bin and Wang, Xiaogang and Dai, Jifeng},
   journal={arXiv preprint arXiv:2010.04159},
   year={2020}
 }
-```
 
-- Cite **Conditional-DETR**
-```BibTex
 @inproceedings{meng2021-CondDETR,
   title       = {Conditional DETR for Fast Training Convergence},
   author      = {Meng, Depu and Chen, Xiaokang and Fan, Zejia and Zeng, Gang and Li, Houqiang and Yuan, Yuhui and Sun, Lei and Wang, Jingdong},
   booktitle   = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
   year        = {2021}
 }
-```
 
-- Cite **DAB-DETR**
-```BibTex
 @inproceedings{
       liu2022dabdetr,
       title={{DAB}-{DETR}: Dynamic Anchor Boxes are Better Queries for {DETR}},
@@ -177,10 +201,7 @@ If you find the projects held by detrex useful in your research, please consider
       year={2022},
       url={https://openreview.net/forum?id=oMI9PjOb9Jl}
 }
-```
 
-- Cite **DN-DETR**
-```BibTex
 @inproceedings{li2022dn,
       title={Dn-detr: Accelerate detr training by introducing query denoising},
       author={Li, Feng and Zhang, Hao and Liu, Shilong and Guo, Jian and Ni, Lionel M and Zhang, Lei},
@@ -188,10 +209,7 @@ If you find the projects held by detrex useful in your research, please consider
       pages={13619--13627},
       year={2022}
 }
-```
 
-- Cite **DINO**
-```BibTex
 @misc{zhang2022dino,
       title={DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection}, 
       author={Hao Zhang and Feng Li and Shilong Liu and Lei Zhang and Hang Su and Jun Zhu and Lionel M. Ni and Heung-Yeung Shum},
@@ -200,27 +218,46 @@ If you find the projects held by detrex useful in your research, please consider
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
-```
 
-- Cite **Group-DETR**
-```BibTex
 @article{chen2022group,
   title={Group DETR: Fast DETR Training with Group-Wise One-to-Many Assignment},
   author={Chen, Qiang and Chen, Xiaokang and Wang, Jian and Feng, Haocheng and Han, Junyu and Ding, Errui and Zeng, Gang and Wang, Jingdong},
   journal={arXiv preprint arXiv:2207.13085},
   year={2022}
 }
-```
 
-- Cite **H-DETR**
-```BibTex
 @article{jia2022detrs,
   title={DETRs with Hybrid Matching},
   author={Jia, Ding and Yuan, Yuhui and He, Haodi and Wu, Xiaopei and Yu, Haojun and Lin, Weihong and Sun, Lei and Zhang, Chao and Hu, Han},
   journal={arXiv preprint arXiv:2207.13080},
   year={2022}
 }
+
+@misc{li2022mask,
+      title={Mask DINO: Towards A Unified Transformer-based Framework for Object Detection and Segmentation}, 
+      author={Feng Li and Hao Zhang and Huaizhe xu and Shilong Liu and Lei Zhang and Lionel M. Ni and Heung-Yeung Shum},
+      year={2022},
+      eprint={2206.02777},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+@article{yan2023bridging,
+ title={Bridging the Gap Between End-to-end and Non-End-to-end Multi-Object Tracking},
+ author={Yan, Feng and Luo, Weixin and Zhong, Yujie and Gan, Yiyang and Ma, Lin},
+ journal={arXiv preprint arXiv:2305.12724},
+ year={2023}
+}
+
+@InProceedings{Chen_2023_CVPR,
+    author    = {Chen, Fangyi and Zhang, Han and Hu, Kai and Huang, Yu-Kai and Zhu, Chenchen and Savvides, Marios},
+    title     = {Enhanced Training of Query-Based Object Detection via Selective Query Recollection},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {23756-23765}
+}
 ```
+
 
 </details>
 
