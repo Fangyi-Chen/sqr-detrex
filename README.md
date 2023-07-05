@@ -103,7 +103,7 @@ Results and models are available in [model zoo](https://detrex.readthedocs.io/en
 - [x] [DINO (ArXiv'2022)](./projects/dino/)
 - [x] [Group-DETR (ArXiv' 2022)](./projects/group_detr/)
 - [x] [H-Deformable-DETR (ArXiv' 2022)](./projects/h_deformable_detr/)
-
+- [x] [SQR-DAB-DETR (CVPR'2022)](./projects/sqr_detr/)
 Please see [projects](./projects/) for the details about projects that are built based on detrex.
 
 </details>
